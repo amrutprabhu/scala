@@ -1,4 +1,4 @@
-package com.amrut.scala.level1.excersize
+package com.amrut.scala.level1.implement
 
 class Novel(name: String, yearOfRelease: Int, author: Writer) {
 

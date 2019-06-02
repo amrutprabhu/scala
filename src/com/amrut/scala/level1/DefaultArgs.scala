@@ -10,6 +10,7 @@ object DefaultArgs extends  App {
 
   println(factorial(4))
 
+  // Named arguments
 
   def namedArgumnent( firstArg:Int, secondArg:Int):Unit = println(firstArg+" "+secondArg)
 

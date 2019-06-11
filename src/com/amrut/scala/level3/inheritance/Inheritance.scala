@@ -25,7 +25,7 @@ object Inheritance extends App {
     val type_ = "wild"
   }
 
-  class Dog(dogType : String) extends Animal {
+  class Dog(dogType: String) extends Animal {
     override val type_ : String = this.dogType
   }
 

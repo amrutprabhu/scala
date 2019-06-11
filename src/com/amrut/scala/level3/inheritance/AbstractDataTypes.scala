@@ -3,13 +3,14 @@ package com.amrut.scala.level3.inheritance
 object AbstractDataTypes extends App {
 
   // Abstract classes
-  abstract class animal{
-    val animalType:String
-    def eat:Unit
+  abstract class animal {
+    val animalType: String
+
+    def eat: Unit
 
   }
 
-  class Dog extends animal{
+  class Dog extends animal {
     override val animalType: String = "k8"
 
     def eat: Unit = println("Dog eat")
@@ -19,11 +20,11 @@ object AbstractDataTypes extends App {
 
   // traits
 
-   trait ferocious{
-     def eat:Unit
-   }
+  trait ferocious {
+    def eat: Unit
+  }
 
-  class Cat extends animal with ferocious{
+  class Cat extends animal with ferocious {
     override val animalType: String = "dumb"
 
     override def eat: Unit = println("cat is eating")

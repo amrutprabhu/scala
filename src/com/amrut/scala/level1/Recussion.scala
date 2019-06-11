@@ -4,12 +4,12 @@ object Recussion extends App {
 
   //tail recursion
 
-  def stringMultiplier(value:String, n:Int, accumulator:String):String ={
-    if(n <=0) accumulator
+  def stringMultiplier(value: String, n: Int, accumulator: String): String = {
+    if (n <= 0) accumulator
     else
-    stringMultiplier(value,n-1, value+accumulator)
+      stringMultiplier(value, n - 1, value + accumulator)
   }
 
-  println(stringMultiplier("hello ",3,""))
+  println(stringMultiplier("hello ", 3, ""))
 
 }

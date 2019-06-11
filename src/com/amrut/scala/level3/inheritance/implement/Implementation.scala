@@ -1,5 +1,6 @@
 package com.amrut.scala.level3.inheritance.implement
 
+
 object Implementation extends App {
 
   object EmptyObject extends Mylist {
@@ -7,9 +8,11 @@ object Implementation extends App {
 
     override def next: Mylist = throw new NoSuchElementException
 
-    override def isempty: Boolean = false
+    override def isempty: Boolean = true
 
     override def add(value: Int): Mylist = throw new NoSuchElementException
+
+    override def toString: String = ""
   }
 
   class Node(headVal: Int, list: Mylist) extends Mylist {
@@ -21,13 +24,16 @@ object Implementation extends App {
     override def isempty: Boolean = false
 
     override def add(value: Int): Mylist = new Node(value, EmptyObject)
+
+    override def toString: String = {
+      if (next.isempty) this.head.toString
+      else s"[${this.head}, ${next.toString()}]"
+    }
   }
 
+  val node = new Node(1, new Node(2, EmptyObject))
 
-  object application extends App{
+  println(node.toString)
 
-    val node = new Node(1, new Node(2,EmptyObject))
-
-
-  }
 }
+
